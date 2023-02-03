@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as csv from 'fast-csv';
 import * as path from 'path'
-import { stripDollarSign } from './utils/sanitizeInputs'
+import { normalize } from './utils/sanitizeInputs'
 
 const directoryPath: string = './csvFiles'
 const outputFile: string = 'grouped_data.csv'
@@ -20,6 +20,7 @@ fs.readdir(directoryPath, (err: NodeJS.ErrnoException | null, files: string[]) =
         
         csvFiles.forEach(file => {
             const filePath = path.join(directoryPath, file)
+            
             fs.createReadStream(filePath)
                 .pipe(csv.parse({ headers: true }))
                 .on('data', (row: any) => {
@@ -27,7 +28,8 @@ fs.readdir(directoryPath, (err: NodeJS.ErrnoException | null, files: string[]) =
                     if (!data[row.Category]) {
                         data[row.Category] = 0
                     }
-                    data[row.Category] += parseFloat(stripDollarSign(row['Amount (USD)']))
+                    // need to ignore "payments" for apple account, plus invert amount (no -$ there)
+                    data[row.Category] += parseFloat(normalize(filePath, row['Amount (USD)']))
                 })
                 .on('end', () => {
                     console.log(`Finished processing ${file}`)
