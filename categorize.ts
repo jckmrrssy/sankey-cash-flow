@@ -17,24 +17,26 @@ fs.readdir(directoryPath, (err: NodeJS.ErrnoException | null, files: string[]) =
         console.error(err)
     } else {
         const csvFiles = files.filter(file => path.extname(file) === ('.csv'))
-        
         csvFiles.forEach(file => {
             const filePath = path.join(directoryPath, file)
-            
             fs.createReadStream(filePath)
                 .pipe(csv.parse({ headers: true }))
                 .on('data', (row: any) => {
                     // TODO: extend support to similar column names 
                     if (!data[row.Category]) {
                         data[row.Category] = 0
-                    }
+                    } 
+                    // TODO: sort categories 
                     // need to ignore "payments" for apple account, plus invert amount (no -$ there)
                     data[row.Category] += parseFloat(normalize(filePath, row['Amount (USD)']))
                 })
                 .on('end', () => {
                     console.log(`Finished processing ${file}`)
                     if (file === csvFiles[csvFiles.length - 1]) {
-                        const csvString = Object.entries(data).map(([category, totalAmount]) => `${category},${totalAmount}\n`).join('')
+                        const csvString = Object.entries(data)
+                            .sort(([a], [b]) => a.localeCompare(b))
+                            .map(([category, totalAmount]) => `${category},${totalAmount}\n`)
+                            .join('')
                         fs.writeFile(outputFile, csvString, (err: NodeJS.ErrnoException | null ) => {
                             if (err) {
                                 console.error(err)

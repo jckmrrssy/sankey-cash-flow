@@ -7,9 +7,9 @@ export const stripDollarSign = (amount: string): string => {
 }
 
 export const normalize = (filePath: string, amount: string): any => {
-    if (filePath === "csvFiles/AppleTransactions2022.csv") {
-       return amount
+    if (filePath === "csvFiles/Transactions_For_Spending_From_Jan_2022_to_Dec_2022.csv") {
+       return stripDollarSign(amount)
     } else {
-        return stripDollarSign(amount)
+        return amount
     }
 }

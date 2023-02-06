@@ -1,41 +1,60 @@
-Interest,130.17000000000002
-Restaurants,11093.820000000005
-Payment,-11697.139999999998
-Gas,413.63000000000005
-Other,3533.6700000000005
-Grocery,2069.08
-Utilities,2025.5900000000001
+Category,Amount
+401(k),2100.05
+401k MATCH,3600.13
+401k Roth,5650.12
 Alcohol,109.11000000000001
-Shopping,279.09000000000003
-Installment,226.31
-Transportation,769.3399999999999
+ATM/Cash,486.5
+Automotive,1294.23
+Bars,317.69
+Cable/Satellite,120
+Checks,50
+Clothing/Shoes,316.23
 Credit,-165.9
 Debit,1.8
-Entertainment,1971.0899999999995
+Dental,216
+Dues & Subscriptions,149.46
+Electronics,290.8
+Entertainment,1971.0899999999997
+ER AD&D,34.56
+ER Dental,633.12
+ER Medical,11213.04
+ER Short Term Disability,19
+Federal Withholding,17028.3
+Gas,413.63000000000005
+Gasoline/Fuel,2316.2100000000005
+General Merchandise,5212.599999999998
 Govt-services-parking,200
 Groceries,2125.2100000000005
-Rent,574.0799999999999
-Loans,11445.170000000006
-General Merchandise,5212.599999999998
-Insurance,3073.66
-Service Charges/Fees,1973.6299999999994
-Gasoline/Fuel,2316.2100000000005
-Electronics,290.8
-Online Services,1254.47
-Venmo transfer,2399.55
-Cable/Satellite,120
-ATM/Cash,486.5
-Travel,5431.619999999999
-Herbs,6159
-Other Expenses,812.86
-Clothing/Shoes,316.23
-Personal Care,215.63
-Bars,317.69
+Grocery,2069.08
+Gross Pay,122536.72
 Healthcare/Medical,198.38
-Automotive,1294.23
-Home Improvement,459.56
+Herbs,6159
 Hobbies,62.66
+Home Improvement,459.56
+HSA,6100.08
+HSA ER,1200
+Installment,226.31
+Insurance,3073.66
+Interest,130.17000000000002
+Legal Benefit,189.84
+Loans,11445.170000000006
+Medical,3720
+Medicare,1620.19
+NL Parking Ramp,490
+OASDI,6927.7
+Online Services,1254.47
+Other,3533.6700000000005
+Other Expenses,812.86
+Payment,-11697.139999999998
+Personal Care,215.63
 Pets/Pet Care,241
 Postage & Shipping,1.1
-Checks,50
-Dues & Subscriptions,149.46
+Rent,574.0799999999999
+Restaurants,11093.820000000003
+Service Charges/Fees,1973.6299999999994
+Shopping,279.09000000000003
+State Tax MN,6562
+Transportation,769.3399999999999
+Travel,5431.619999999999
+Utilities,2025.5900000000001
+Venmo transfer,2399.55

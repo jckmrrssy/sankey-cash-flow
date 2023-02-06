@@ -1,2 +1,6 @@
 node_modules
 .DS_Store
+
+# Ignore CSV files. Might have user data
+csvFiles
+*.csv
