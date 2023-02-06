@@ -33,9 +33,10 @@ fs.readdir(directoryPath, (err: NodeJS.ErrnoException | null, files: string[]) =
                 .on('end', () => {
                     console.log(`Finished processing ${file}`)
                     if (file === csvFiles[csvFiles.length - 1]) {
-                        const csvString = Object.entries(data)
+                        // TODO: clean me up
+                        const csvString = 'Category,Amount\n' + Object.entries(data)
                             .sort(([a], [b]) => a.localeCompare(b))
-                            .map(([category, totalAmount]) => `${category},${totalAmount}\n`)
+                            .map(([Category, Amount]) => `${Category},${Amount}\n`)
                             .join('')
                         fs.writeFile(outputFile, csvString, (err: NodeJS.ErrnoException | null ) => {
                             if (err) {
