@@ -34,6 +34,6 @@ async function combineCategories(inputFile: string, outputFile: string, combineC
     });
 }
 
-combineCategories('./grouped_data.csv', './grouped_combined_data.csv', [
+combineCategories('./internalCsvFiles/grouped_data.csv', './internalCsvFiles/grouped_combined_data.csv', [
   ['Grocery', 'Groceries'],
 ]);

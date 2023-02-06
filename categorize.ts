@@ -3,8 +3,8 @@ import * as csv from 'fast-csv';
 import * as path from 'path'
 import { normalize } from './utils/sanitizeInputs'
 
-const directoryPath: string = './csvFiles'
-const outputFile: string = 'grouped_data.csv'
+const directoryPath: string = './inputCsvFiles'
+const outputFile: string = './internalCsvFiles/grouped_data.csv'
 
 interface Data {
     [key: string]: number
@@ -28,7 +28,7 @@ fs.readdir(directoryPath, (err: NodeJS.ErrnoException | null, files: string[]) =
                     } 
                     // TODO: sort categories 
                     // need to ignore "payments" for apple account, plus invert amount (no -$ there)
-                    data[row.Category] += parseFloat(normalize(filePath, row['Amount (USD)']))
+                    data[row.Category] += Math.abs(parseFloat(normalize(filePath, row['Amount (USD)'])))
                 })
                 .on('end', () => {
                     console.log(`Finished processing ${file}`)

@@ -24,7 +24,7 @@ const categoryMapping: Mapping = {
 
 const output: string[] = []
 
-fs.createReadStream('./grouped_data.csv')
+fs.createReadStream('.internalCsvFiles/grouped_combined_data.csv')
     .pipe(csv.parse({ headers: true }))
     .on("data", row => {
         const category = row["Category"]

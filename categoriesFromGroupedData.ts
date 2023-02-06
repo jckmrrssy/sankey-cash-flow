@@ -27,13 +27,11 @@ const generateCategoryMapping = async (filePath: string): Promise<Mapping> => {
     })
 }
 
-generateCategoryMapping('./grouped_combined_data.csv')
+generateCategoryMapping('./internalCsvFiles/grouped_combined_data.csv')
     .then(categoryMapping => {
         fs.writeFileSync('mappings/categoryMapping.json', JSON.stringify(categoryMapping, null, 2))
         console.log("Category Mapping JSON file written successfully.")
     })
-
-
     .catch(error => {
         console.error(error)
     })
