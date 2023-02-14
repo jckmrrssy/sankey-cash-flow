@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import * as csv from 'fast-csv'
 
 interface Mapping {
-    [key: string]: [string, string]
+    [key: string]: string
 }
 
 const generateCategoryMapping = async (filePath: string): Promise<Mapping> => {
@@ -13,7 +13,7 @@ const generateCategoryMapping = async (filePath: string): Promise<Mapping> => {
             .pipe(csv.parse({ headers: true }))
             .on('data', row => {
                 const category = row["Category"]
-                categoryMapping[category] = ["Source", "Target"]
+                categoryMapping[category] = "Source"
                 console.log(row)
             })
             .on('end', () => {

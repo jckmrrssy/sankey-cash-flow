@@ -26,7 +26,6 @@ fs.readdir(directoryPath, (err: NodeJS.ErrnoException | null, files: string[]) =
                     if (!data[row.Category]) {
                         data[row.Category] = 0
                     } 
-                    // TODO: sort categories 
                     // need to ignore "payments" for apple account, plus invert amount (no -$ there)
                     data[row.Category] += Math.abs(parseFloat(normalize(filePath, row['Amount (USD)'])))
                 })

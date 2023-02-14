@@ -1,234 +1,63 @@
 {
-  "401(k)": [
-    "Source",
-    "Target"
-  ],
-  "401k MATCH": [
-    "Source",
-    "Target"
-  ],
-  "401k Roth": [
-    "Source",
-    "Target"
-  ],
-  "Alcohol": [
-    "Source",
-    "Target"
-  ],
-  "ATM/Cash": [
-    "Source",
-    "Target"
-  ],
-  "Automotive": [
-    "Source",
-    "Target"
-  ],
-  "Bars": [
-    "Source",
-    "Target"
-  ],
-  "Cable/Satellite": [
-    "Source",
-    "Target"
-  ],
-  "Checks": [
-    "Source",
-    "Target"
-  ],
-  "Clothing/Shoes": [
-    "Source",
-    "Target"
-  ],
-  "Credit": [
-    "Source",
-    "Target"
-  ],
-  "Debit": [
-    "Source",
-    "Target"
-  ],
-  "Dental": [
-    "Source",
-    "Target"
-  ],
-  "Dues & Subscriptions": [
-    "Source",
-    "Target"
-  ],
-  "Electronics": [
-    "Source",
-    "Target"
-  ],
-  "Entertainment": [
-    "Source",
-    "Target"
-  ],
-  "ER AD&D": [
-    "Source",
-    "Target"
-  ],
-  "ER Dental": [
-    "Source",
-    "Target"
-  ],
-  "ER Medical": [
-    "Source",
-    "Target"
-  ],
-  "ER Short Term Disability": [
-    "Source",
-    "Target"
-  ],
-  "Federal Withholding": [
-    "Source",
-    "Target"
-  ],
-  "Gas": [
-    "Source",
-    "Target"
-  ],
-  "Gasoline/Fuel": [
-    "Source",
-    "Target"
-  ],
-  "General Merchandise": [
-    "Source",
-    "Target"
-  ],
-  "Govt-services-parking": [
-    "Source",
-    "Target"
-  ],
-  "Groceries": [
-    "Source",
-    "Target"
-  ],
-  "Gross Pay": [
-    "Source",
-    "Target"
-  ],
-  "Healthcare/Medical": [
-    "Source",
-    "Target"
-  ],
-  "Herbs": [
-    "Source",
-    "Target"
-  ],
-  "Hobbies": [
-    "Source",
-    "Target"
-  ],
-  "Home Improvement": [
-    "Source",
-    "Target"
-  ],
-  "HSA": [
-    "Source",
-    "Target"
-  ],
-  "HSA ER": [
-    "Source",
-    "Target"
-  ],
-  "Installment": [
-    "Source",
-    "Target"
-  ],
-  "Insurance": [
-    "Source",
-    "Target"
-  ],
-  "Interest": [
-    "Source",
-    "Target"
-  ],
-  "Legal Benefit": [
-    "Source",
-    "Target"
-  ],
-  "Loans": [
-    "Source",
-    "Target"
-  ],
-  "Medical": [
-    "Source",
-    "Target"
-  ],
-  "Medicare": [
-    "Source",
-    "Target"
-  ],
-  "NL Parking Ramp": [
-    "Source",
-    "Target"
-  ],
-  "OASDI": [
-    "Source",
-    "Target"
-  ],
-  "Online Services": [
-    "Source",
-    "Target"
-  ],
-  "Other": [
-    "Source",
-    "Target"
-  ],
-  "Other Expenses": [
-    "Source",
-    "Target"
-  ],
-  "Payment": [
-    "Source",
-    "Target"
-  ],
-  "Personal Care": [
-    "Source",
-    "Target"
-  ],
-  "Pets/Pet Care": [
-    "Source",
-    "Target"
-  ],
-  "Postage & Shipping": [
-    "Source",
-    "Target"
-  ],
-  "Rent": [
-    "Source",
-    "Target"
-  ],
-  "Restaurants": [
-    "Source",
-    "Target"
-  ],
-  "Service Charges/Fees": [
-    "Source",
-    "Target"
-  ],
-  "Shopping": [
-    "Source",
-    "Target"
-  ],
-  "State Tax MN": [
-    "Source",
-    "Target"
-  ],
-  "Transportation": [
-    "Source",
-    "Target"
-  ],
-  "Travel": [
-    "Source",
-    "Target"
-  ],
-  "Utilities": [
-    "Source",
-    "Target"
-  ],
-  "Venmo transfer": [
-    "Source",
-    "Target"
-  ]
+  "401(k)": "Retirement",
+  "401k MATCH": "Employer Paid Benefits",
+  "401k Roth": "Retirement",
+  "Alcohol": "Spending",
+  "ATM/Cash": "Spending",
+  "Automotive": "Spending",
+  "Bars": "Spending",
+  "Cable/Satellite": "Spending",
+  "Checks": "Spending",
+  "Clothing/Shoes": "Spending",
+  "Credit": "Cashflow",
+  "Debit": "Cashflow",
+  "Dental": "Spending",
+  "Dues & Subscriptions": "Spending",
+  "Electronics": "Spending",
+  "Entertainment": "Spending",
+  "ER AD&D": "Employer Paid Benefits",
+  "ER Dental": "Employer Paid Benefits",
+  "ER Medical": "Employer Paid Benefits",
+  "ER Short Term Disability": "Employer Paid Benefits",
+  "Federal Withholding": "Taxes",
+  "Gas": "Spending",
+  "Gasoline/Fuel": "Spending",
+  "General Merchandise": "Spending",
+  "Govt-services-parking": "Spending",
+  "Groceries": "Spending",
+  "Gross Pay": "Source",
+  "Healthcare/Medical": "Spending",
+  "Herbs": "Spending",
+  "Hobbies": "Spending",
+  "Home Improvement": "Spending",
+  "HSA": "Retirement",
+  "HSA ER": "Employer Paid Benefits",
+  "Installment": "Spending",
+  "Insurance": "Spending",
+  "Interest": "Spending",
+  "Legal Benefit": "Spending",
+  "Loans": "Spending",
+  "Medical": "Spending",
+  "Medicare": "Taxes",
+  "NL Parking Ramp": "Spending",
+  "OASDI": "Taxes",
+  "Online Services": "Spending",
+  "Other": "Spending",
+  "Other Expenses": "Spending",
+  "Payment": "Spending",
+  "Personal Care": "Spending",
+  "Pets/Pet Care": "Spending",
+  "Postage & Shipping": "Spending",
+  "Rent": "Spending",
+  "Restaurants": "Spending",
+  "Service Charges/Fees": "Spending",
+  "Shopping": "Spending",
+  "State Tax MN": "Taxes",
+  "Transportation": "Spending",
+  "Travel": "Spending",
+  "Utilities": "Spending",
+  "Venmo transfer": "Cashflow",
+  "Retirement": "Gross Income",
+  "Budget": "Gross Income",
+  "Taxes": "Gross Income"
 }

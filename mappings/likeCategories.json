@@ -1,3 +1,5 @@
 [
-    ["Grocery", "Groceries"]
+    ["Grocery", "Groceries"],
+    ["Other", "Other Expenses"],
+    ["Payment", "Installment"]
 ]

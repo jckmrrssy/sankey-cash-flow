@@ -1,30 +1,15 @@
 import * as fs from 'fs'
-import * as csv from 'fast-csv'
-// Input: 
-// Category,Amount
-//
-// Output: 
-// Source [Amount] Target
-// import { categoryMapping } from './categoryMapping' 
+import * as csv from 'fast-csv' 
+import categoryMapping from './mappings/categoryMapping.json'
 
-const formatOutput = (mapping: Mapping, category: string, amount: string): string => {
-    const [source, target] = mapping[category] || ["Unknown", "Unknown"]
-    return `${source} [ ${amount} ] ${target}`
-}
-
-interface Mapping {
-    [key: string]: [string, string]
-}
-
-const categoryMapping: Mapping = {
-    "Income": ["", ""],
-    "Employer Paid Benefits": ["", ""]
-
+const formatOutput = (mapping: { [key: string]: string }, category: string, amount: string | undefined): string => {
+    const target = mapping[category] || "Unknown"
+    return `${target} [ ${amount ? `${parseFloat(amount).toFixed(2)}` : "0.00"} ] ${category}`
 }
 
 const output: string[] = []
 
-fs.createReadStream('.internalCsvFiles/grouped_combined_data.csv')
+fs.createReadStream('./internalCsvFiles/grouped_combined_data.csv')
     .pipe(csv.parse({ headers: true }))
     .on("data", row => {
         const category = row["Category"]
@@ -33,7 +18,7 @@ fs.createReadStream('.internalCsvFiles/grouped_combined_data.csv')
         output.push(formattedOutput)
     })
     .on("end", () => {
-        fs.writeFile("sankey.txt", output.join("\n"), err => {
+        fs.writeFile("sankey.txt", output.sort().join("\n"), err => {
             if (err) throw err
             console.log("Results written to snakey.txt")
         })
